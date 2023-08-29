@@ -8,14 +8,14 @@
 &nbsp; 
 <br>
 <p align="center">
-    Form Preview
+    Video Preview
 </p>
 <img src="demo.gif">
 </td> 
 <td width="50%">
 <br>
 <p align="center">
-    Video Preview
+    Home Page Preview
 </p>
 <img src="demo.png">  
 </td>
