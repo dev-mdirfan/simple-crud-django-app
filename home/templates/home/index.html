@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+
+{% if users %}
+    {% for user in users %}
+        <p>{{ user.name }} {{ user.email }} {{ user.password }}
+        <a href="{% url 'update' user.id %}">Update</a>
+        <form action="{% url 'delete' user.id %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Delete">
+        </form>
+        </p>
+    {% endfor %}
+{% else %}
+    <p>No users are available.</p>
+{% endif %}
+
+{% endblock content %}
+
